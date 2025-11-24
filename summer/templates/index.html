@@ -1,0 +1,408 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سومر</title>
+   <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+<!-- 
+TemplateMo 599 Noir Fashion
+https://templatemo.com/tm-599-noir-fashion
+-->
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-container">
+      
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link active">من نحن</a></li>
+                <li><a href="#collections" class="nav-link">رؤيتنا</a></li>
+                <li><a href="#featured" class="nav-link">خبرتنا في التصنيع</a></li>
+                <li><a href="#contact" class="nav-link">تخصصنا في ملزومات الأركيلة</a></li>
+                <li><a href="#products" class="nav-cta">منتجاتنا </a></li>
+                <li><a href="#contact" class="nav-cta"  >اتصل بنا </a></li>
+            </ul>
+                  <a href="#home" class="logo-link">
+              <div class="logo">
+                 <img  src="{% static 'images/logo.webp' %}" alt="">
+              </div>
+            </a>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+       
+               <li><a href="#about">من نحن</a></li>
+                <li><a href="#collections" >رؤيتنا</a></li>
+                <li><a href="#featured" >خبرتنا في التصنيع</a></li>
+                <li><a href="#contact" >تخصصنا في ملزومات الأركيلة</a></li>
+                <li><a href="#products" >منتجاتنا </a></li>
+                <li><a href="#contact"   >اتصل بنا </a></li>
+        </ul>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="hero-container">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    <span class="line accent">حرارة</span>
+                    <span  class="line">جودة</span>
+                    <span  class="line">ثقة</span>
+                </h1>
+                <p class="hero-description">
+نحن لا نكتفي بالاستيراد أو التجارة فقط؛ بل نمتلك مصانع خاصة مجهّزة بأحدث التقنيات، تمكننا من إنتاج فحم يتميز بقوة الاشتعال، طول مدة الاحتراق، وقلة الدخان، ليمنح المستخدم تجربة أركيلة مثالية لا تشوبها أي رائحة مزعجة أو طعم غريب.                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-label">حرارة فائقة</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">إشعال سريع</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">احتراق طويل</span>
+                    </div>
+                </div>
+                <div class="cta-group">
+                    <a href="#products" class="cta-button primary">منتجاتنا</a>
+                    <a href="#featured" class="cta-button outline">لماذا يثق بنا عملاؤنا؟</a>
+                </div>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-wrapper">
+                    <div class="hero-carousel">
+                        <div class="carousel-slide active">
+                            <img src="{% static 'images/06.webp'%}" alt="Fashion Model 1">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="{% static 'images/07.webp'%}" alt="Fashion Model 2">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="{% static 'images/06.webp'%}" alt="Fashion Model 3">
+                        </div>
+                        <div class="carousel-overlay"></div>
+                        <div class="carousel-indicators">
+                            <span class="indicator active" data-slide="0"></span>
+                            <span class="indicator" data-slide="1"></span>
+                            <span class="indicator" data-slide="2"></span>
+                        </div>
+                    </div>
+           
+                    
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+ <section class="featured" id="about">
+        <div class="featured-container">
+            <div class="featured-hero">
+                <div class="featured-content">
+                    <span class="label">مصنوع بشغف</span>
+                    <h2> شركة سومر التجارية</h2>
+                    <p>
+                        نحن لا نكتفي بالاستيراد أو التجارة فقط؛ بل نمتلك مصانع خاصة مجهّزة بأحدث التقنيات، تمكننا من إنتاج فحم يتميز بقوة الاشتعال، طول مدة الاحتراق، وقلة الدخان، ليمنح المستخدم تجربة أركيلة مثالية لا تشوبها أي رائحة مزعجة أو طعم غريب.
+                        <br>
+                        جودة فحم سومر تبدأ من اختيار اجود قشور جوز الهند ، يمر عبر مراحل معالجة وتجفيف صارمة، تضمن منتجًا صلبًا، ثابت الأداء، وموثوقًا لدرجة تجعله مفضلًا لدى المقاهي والمتاجر.
+                        <br>
+                        تسعى شركة سومر إلى بناء علاقة طويلة الأمد مع عملائها، ولذلك نلتزم بتقديم منتجات ذات جودة ثابتة من دفعة إلى أخرى، مع احترام مواعيد التسليم وتوفير الكميات المطلوبة بدون أي تأخير.
+                    </p>
+                    
+                    <div class="feature-highlights">
+                        <div class="highlight-item">
+                            <div class="highlight-icon">👑</div>
+                            <div class="highlight-title">حرارة فائقة</div>
+                            <div class="highlight-desc">حرارة عالية جداً تفوق المعتاد وتسبب ذوبان أو تغير المواد بسرعة</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">🌱</div>
+                            <div class="highlight-title">إشعال سريع</div>
+                            <div class="highlight-desc">قدرة مادة على البدء بالاحتراق بسرعة عند التعرض للشرارة أو الحرارة.</div>
+                        </div>
+                        <div class="highlight-item">
+                            <div class="highlight-icon">✨</div>
+                            <div class="highlight-title">احتراق طويل</div>
+                            <div class="highlight-desc">استمرار اشتعال مادة لفترة زمنية طويلة دون انطفاء سريع.</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#collections" class="feature-cta">اكتشف حرفتنا</a>
+                </div>
+                
+                <div class="featured-image-section">
+                    <div class="featured-image-grid">
+                        <div class="featured-img">
+                            <img src="{% static 'images/06.webp'%}" alt="">
+                        </div>
+                        <div class="featured-img">
+                            <img src="{% static 'images/07.webp'%}" alt="">
+                        </div>
+                        <div class="featured-img">
+                            <img src="{% static 'images/06.webp'%}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonials">
+                <div class="testimonials-header">
+                    <h3>ماذا يقول زبائننا</h3>
+                    <p class="section-subtitle">هم يثقون بجودة وشعلتنا</p>
+                </div>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <div class="testimonial-quote">
+                            فحم هذه الشركة ذو جودة عالية، حرارة قوية ومدة احتراق طويلة. استخدامه كان تجربة رائعة!
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>محمد عبود ابو خساوي السود</h4>
+                                <p>بائع جملة</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <div class="testimonial-quote">
+                            فحم هذه الشركة ذو جودة عالية، حرارة قوية ومدة احتراق طويلة. استخدامه كان تجربة رائعة!
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>محمد عبود ابو خساوي السود</h4>
+                                <p>بائع جملة</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <div class="testimonial-quote">
+                            فحم هذه الشركة ذو جودة عالية، حرارة قوية ومدة احتراق طويلة. استخدامه كان تجربة رائعة!
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>محمد عبود ابو خساوي السود</h4>
+                                <p>بائع جملة</p>
+                            </div>
+                        </div>
+                    </div>
+              
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="collections" id="products">
+        <div class="section-header">
+            <h2 class="section-title">منتجاتنا </h2>
+            <p class="section-subtitle">اكتشف مجموعتنا المختارة</p>
+        </div>
+        
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">الكل</button>
+            <button class="tab-btn" data-category="women">فحم سريع الاشتعال</button>
+            <button class="tab-btn" data-category="men">فحم للشيشة</button>
+            <button class="tab-btn" data-category="accessories">فحم للشواء</button>
+        </div>
+
+        <div class="grid" id="collectionsGrid">
+            <div class="collection-card" data-category="women">
+                <div class="collection-thumbnail">
+                    <img src="{% static 'images/01.webp'%}" alt="Urban Edge Women's Collection">
+                </div>
+                <div class="card-content">
+                    <span class="card-badge">فحمم 1002</span>
+                    <h3 class="card-title">فحم لوزي مثال</h3>
+                    <p class="card-subtitle">فحم ممتاز</p>
+                    <p class="card-price">1000 دينار</p>
+                </div>
+            </div>
+     
+            <div class="collection-card" data-category="man">
+                <div class="collection-thumbnail">
+                    <img src="{% static 'images/02.webp'%}" alt="Urban Edge Women's Collection">
+                </div>
+                <div class="card-content">
+                    <span class="card-badge">فحمم 10042</span>
+                    <h3 class="card-title">فحم ظرطه</h3>
+                    <p class="card-subtitle">فحم ممتاز</p>
+                    <p class="card-price">1000 دينار</p>
+                </div>
+            </div>
+               <div class="collection-card" data-category="accessories">
+                <div class="collection-thumbnail">
+                    <img src="{% static 'images/03.webp'%}" alt="Urban Edge Women's Collection">
+                </div>
+                <div class="card-content">
+                    <span class="card-badge">فحمم 10042</span>
+                    <h3 class="card-title">فحم ظرطه</h3>
+                    <p class="card-subtitle">فحم ممتاز</p>
+                    <p class="card-price">1000 دينار</p>
+                </div>
+            </div>
+                 <div class="collection-card" data-category="accessories">
+                <div class="collection-thumbnail">
+                    <img src="{% static 'images/04.webp'%}" alt="Urban Edge Women's Collection">
+                </div>
+                <div class="card-content">
+                    <span class="card-badge">فحمم 10042</span>
+                    <h3 class="card-title">فحم ظرطه</h3>
+                    <p class="card-subtitle">فحم ممتاز</p>
+                    <p class="card-price">1000 دينار</p>
+                </div>
+            </div>
+                 <div class="collection-card" data-category="accessories">
+                <div class="collection-thumbnail">
+                    <img src="{% static 'images/05.webp'%}" alt="Urban Edge Women's Collection">
+                </div>
+                <div class="card-content">
+                    <span class="card-badge">فحمم 10042</span>
+                    <h3 class="card-title">فحم ظرطه</h3>
+                    <p class="card-subtitle">فحم ممتاز</p>
+                    <p class="card-price">1000 دينار</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2 class="section-title">اتصل بنا</h2>
+                <p class="section-subtitle">يسعدنا سماع رأيك</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-wrapper">
+                   <form id="contactForm">
+    <div class="form-row">
+        <div class="form-group">
+            <label for="firstName">الاسم الاول</label>
+            <input type="text" id="firstName" name="firstName" placeholder="محمد" required>
+        </div>
+        <div class="form-group">
+            <label for="lastName">اسم العائلة</label>
+            <input type="text" id="lastName" name="lastName" placeholder="احمد" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="email">البريد الالكتروني</label>
+        <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+    </div>
+
+    <div class="form-group">
+        <label for="subject">الموضوع</label>
+        <input type="text" id="subject" name="subject" placeholder="كيف يمكننا مساعدتك؟" required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">الرسالة</label>
+        <textarea id="message" name="message" placeholder="اخبرنا المزيد عن استفسارك..." required></textarea>
+    </div>
+
+    <button type="submit" class="form-submit">ارسال الرسالة</button>
+</form>
+
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div class="info-content">
+                            <h3>زر متجرنا الرئيسي</h3>
+                            {% comment %} <p>123 Fashion Avenue<br>
+                            Bangkok, Thailand 10110<br>
+                            Siam District</p> {% endcomment %}
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">📞</div>
+                        <div class="info-content">
+                            <h3>الهواتف:</h3>
+                            <p>الرئيسي: <a href="tel:+9647806377186"> 9647806377186+ سيد ازهر الموسوي</a><br>
+                            الدعم: <a href="tel:+9647745999882">9647745999882+ سيد احمد الموسوي</a><br>
+                           </p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <div class="info-icon">✉️</div>
+                        <div class="info-content">
+                            <h3>ارسل لنا بريداً</h3>
+                            <p>الرئيسي: <a href="mailto:hello@noir.fashion">hello@noir.fashion</a><br>
+                            الدعم: <a href="mailto:support@noir.fashion">support@noir.fashion</a><br>
+                        </div>
+                  
+                </div>
+                
+            </div>
+            
+            <div class="map-section">
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.551370220076!2d100.53515!3d13.730314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2993fa2f8c6d9%3A0x92cf0e47c4c2ed08!2sSilom%20MRT%20Station!5e0!3m2!1sen!2sth!4v1697000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>NOIR</h3>
+                <p>Redefining fashion with bold designs, sustainable practices, and uncompromising quality. Join us in creating the future of style.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">f</a>
+                    <a href="#" class="social-link">t</a>
+                    <a href="#" class="social-link">i</a>
+                    <a href="#" class="social-link">p</a>
+                </div>
+            </div>
+  
+   
+            <div class="footer-column">
+                <h4>Company</h4>
+               
+                   <a href="#about" class="nav-link active">من نحن</a>
+                   <a href="#collections" class="nav-link">رؤيتنا</a>
+                   <a href="#featured" class="nav-link">خبرتنا في التصنيع</a>
+                   <a href="#contact" class="nav-link">تخصصنا في ملزومات الأركيلة</a>
+             
+               
+  
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 سومر. جميع الحقوق محفوظة. | تصميم وتطوير بواسطة 
+                <a href="https://yourwebsite.com" target="_blank" rel="nofollow" style="color: var(--accent); text-decoration: none;">اسمك أو شركتك</a>
+                
+            <div class="payment-methods">
+                <div class="payment-icon">VISA</div>
+                <div class="payment-icon">MC</div>
+                <div class="payment-icon">AMEX</div>
+                <div class="payment-icon">PAY</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+</html>
