@@ -68,8 +68,9 @@ nav.scrolled {
 	flex-wrap: wrap;
 	gap: 20px;
 }
+
 .logo img {
-		width: 200px;
+	width: 200px;
 	height: auto;
 }
 
@@ -110,7 +111,7 @@ nav.scrolled {
 .nav-links a {
 	color: var(--text-light);
 	text-decoration: none;
-	font-size: 13px;
+	font-size: 17px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	position: relative;
@@ -237,7 +238,9 @@ nav.scrolled {
 
 	.testimonials-grid {
 		grid-template-columns: 1fr;
+		padding: 0 20px 0 20px;
 		gap: 20px;
+
 	}
 
 	.testimonial-card {
@@ -484,7 +487,7 @@ nav.scrolled {
 	text-align: center;
 }
 
-.hero-title .line  {
+.hero-title .line {
 	display: inline-block;
 	animation: slideUp 1s ease backwards;
 	text-align: center;
@@ -492,31 +495,32 @@ nav.scrolled {
 
 .hero-title .line:nth-child(1) span {
 	animation-delay: 0.2s;
-	
+
 
 }
 
 .hero-title .line:nth-child(2) span {
 	animation-delay: 0.3s;
-	
+
 }
 
 .hero-title .line:nth-child(3) span {
 	animation-delay: 0.4s;
-	
+
 }
 
 
 ::selection {
-  background-color: var(--accent); 
-  color: white;           
-  text-shadow: none;        
+	background-color: var(--accent);
+	color: white;
+	text-shadow: none;
 }
 
 
 
 .hero-title .accent {
-background: linear-gradient(135deg, #fff, var(--accent));	-webkit-background-clip: text;
+	background: linear-gradient(135deg, #fff, var(--accent));
+	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	font-style: italic;
 }
@@ -562,7 +566,7 @@ background: linear-gradient(135deg, #fff, var(--accent));	-webkit-background-cli
 
 .stat {
 	position: relative;
-	
+
 }
 
 .stat-number {
@@ -885,8 +889,8 @@ background: linear-gradient(135deg, #fff, var(--accent));	-webkit-background-cli
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	transition: all 0.3s ease;
-	font-size: 20px!important;
-		font-family: 'Tajawal', sans-serif;
+	font-size: 20px !important;
+	font-family: 'Tajawal', sans-serif;
 }
 
 .tab-btn.active,
@@ -1626,8 +1630,7 @@ footer {
 }
 
 .social-link {
-	width: 40px;
-	height: 40px;
+
 	border: 1px solid var(--text-muted);
 	border-radius: 50%;
 	display: flex;
@@ -1889,4 +1892,57 @@ footer {
 		flex-direction: column;
 		text-align: center;
 	}
+}
+
+.parallax-wrapper {
+	background-color: var(--bg-section);
+	border: none;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	overflow: hidden;
+
+
+	border: none;
+
+}
+
+
+.parallax--overlay::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(35deg, rgba(0, 0, 0, 0.8) 30%, rgba(0, 0, 0, 0.95) 100%);
+	z-index: 1;
+
+}
+
+.parallax__content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	position: relative;
+	z-index: 2;
+	padding: 4rem 2rem;
+	text-align: center;
+	color: white;
+
+}
+
+.parallax__content p {
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 1.8;
+}
+
+.parallax__content h3 {
+	font-weight: 700;
+	font-size: 32px;
+	color: var(--accent);
 }
