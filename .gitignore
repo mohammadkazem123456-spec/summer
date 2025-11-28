@@ -3,3 +3,8 @@ __pycache__/
 *.pyc
 .env
 summer/media/
+rv7322989018 dockerd
+summer/staticfiles/*
+db.sqlite3
+.vscode/
+.idea/
