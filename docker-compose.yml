@@ -18,7 +18,7 @@ services:
   web:
     build: .
     container_name: summer_django
-    command: gunicorn summer.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn summer.summer.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/app
     depends_on:
