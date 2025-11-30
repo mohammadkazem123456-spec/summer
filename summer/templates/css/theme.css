@@ -1,0 +1,9 @@
+    :root {
+    --primary: {{ theme.primary }};
+    --accent: {{ theme.accent }};
+    --accent-hover: {{ theme.accent_hover }};
+    --text-light: {{ theme.text_light }};
+    --text-muted: {{ theme.text_muted }};
+    --bg-dark: {{ theme.bg_dark }};
+    --bg-dark-second: {{ theme.bg_dark_second }};
+}

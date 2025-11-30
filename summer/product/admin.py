@@ -1,5 +1,17 @@
 from django.contrib import admin
-from .models import Product, Category, Testimonial
+from .models import (
+    ContactMessage,
+    PhoneNumber,
+    Product,
+    Category,
+    SiteSetting,
+    Testimonial,
+    Theme,
+)
+
+from django.db import models
+
+from django import forms
 
 
 @admin.register(Category)
@@ -54,3 +66,42 @@ class TestimonialAdmin(admin.ModelAdmin):
 
     avatar_preview.allow_tags = True
     avatar_preview.short_description = "آواتار"
+
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ("first_name", "last_name", "email", "subject", "created_at")
+    list_filter = ("created_at",)
+    search_fields = ("first_name", "last_name", "email", "subject", "message")
+    readonly_fields = ("created_at",)
+
+
+class ThemeAdminForm(forms.ModelForm):
+    class Meta:
+        model = Theme
+        fields = "__all__"
+        widgets = {
+            "primary": forms.TextInput(attrs={"type": "color"}),
+            "accent": forms.TextInput(attrs={"type": "color"}),
+            "accent_hover": forms.TextInput(attrs={"type": "color"}),
+            "text_light": forms.TextInput(attrs={"type": "color"}),
+            "text_muted": forms.TextInput(attrs={"type": "color"}),
+            "bg_dark": forms.TextInput(attrs={"type": "color"}),
+            "bg_dark_second": forms.TextInput(attrs={"type": "color"}),
+        }
+
+
+@admin.register(Theme)
+class ThemeAdmin(admin.ModelAdmin):
+    form = ThemeAdminForm
+    list_display = ("name", "primary", "accent", "accent_hover")
+
+
+class PhoneInline(admin.TabularInline):
+    model = PhoneNumber
+    extra = 1
+
+
+@admin.register(SiteSetting)
+class SiteSettingAdmin(admin.ModelAdmin):
+    inlines = [PhoneInline]
