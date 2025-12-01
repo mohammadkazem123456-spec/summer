@@ -27,7 +27,12 @@ SECRET_KEY = "django-insecure-q9y1v#8+9j0=+pfycxr*4(d_#ogrja8*#&u9ah+%e5mq5=0i@&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["89.106.206.70", "sumerbusiness.com","www.sumerbusiness.com", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "89.106.206.70",
+    "sumerbusiness.com",
+    "www.sumerbusiness.com",
+    "127.0.0.1",
+]
 
 
 # Application definition
@@ -117,6 +122,13 @@ USE_I18N = True
 
 USE_TZ = True
 
+# تنظیمات https:
+
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True  # اگر بخواهی کل HTTP به HTTPS ریدایرکت شود
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
