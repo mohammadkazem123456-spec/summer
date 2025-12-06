@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 def convert_farsi_to_arabic(text: str) -> str:
@@ -41,11 +42,12 @@ class Product(models.Model):
     image = models.ImageField(upload_to="images/products/")
     price = models.PositiveIntegerField(verbose_name="قیمت (تومان)")
     category = models.ForeignKey(
-        Category,
+        "Category",
         on_delete=models.CASCADE,
         related_name="products",
         verbose_name="دسته‌بندی",
     )
+    content = RichTextField(verbose_name="محتوا", blank=True, null=True)
 
     def save(self, *args, **kwargs):
         # قبل از ذخیره، تبدیل فارسی به عربی
@@ -61,6 +63,34 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+
+# -----------------------------
+# گالری تصاویر محصول
+class ProductGallery(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="gallery"
+    )
+    image = models.ImageField(upload_to="images/product_gallery/")
+    alt_text = models.CharField(
+        max_length=200, blank=True, null=True, verbose_name="توضیح تصویر"
+    )
+
+    def __str__(self):
+        return f"{self.product.title} - گالری"
+
+
+# -----------------------------
+# ویژگی‌ها و مشخصات محصول
+class ProductFeature(models.Model):
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="features"
+    )
+    key = models.CharField(max_length=100, verbose_name="ویژگی")
+    value = models.CharField(max_length=200, verbose_name="مقدار")
+
+    def __str__(self):
+        return f"{self.product.title} - {self.key}: {self.value}"
 
 
 class Testimonial(models.Model):

@@ -299,3 +299,17 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.featured-container, .contact-content').forEach(el => {
     observer.observe(el);
 });
+
+
+
+function changeImage(el) {
+    const main = document.getElementById("main-img");
+    document.querySelectorAll(".thumbnails img").forEach(i => i.classList.remove("active"));
+    el.classList.add("active");
+
+    main.classList.add("fade");
+    setTimeout(() => {
+        main.src = el.src;
+        main.classList.remove("fade");
+    }, 250);
+}

@@ -31,7 +31,7 @@ ALLOWED_HOSTS = [
     "89.106.206.70",
     "sumerbusiness.com",
     "www.sumerbusiness.com",
-    "127.0.0.1",
+    # "*",
 ]
 
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "ckeditor",
     "product",
 ]
 
@@ -128,7 +129,8 @@ USE_TZ = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True  # اگر بخواهی کل HTTP به HTTPS ریدایرکت شود
+# اگر بخواهی کل HTTP به HTTPS ریدایرکت شود
+SECURE_SSL_REDIRECT = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/

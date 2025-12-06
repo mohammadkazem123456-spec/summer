@@ -17,13 +17,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from product.views import home, contact_ajax, theme_css
+from product.views import home, contact_ajax, theme_css, product_detail
 from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("contact-ajax/", contact_ajax, name="contact_ajax"),
+    path("product/<int:pk>/", product_detail, name="product_detail"),
     path("", home, name="home"),
     path("css/theme.css", theme_css, name="theme_css"),
 ]

@@ -1,0 +1,37 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% block title %}
+        سومر
+      {% endblock %}
+    </title>
+
+    <!-- CSS عمومی -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
+    <link rel="stylesheet" href="{% url 'theme_css' %}" />
+
+    {% block extra_head %}
+    {% endblock %}
+  </head>
+  
+  <body>
+      {% block nav %}
+    {% endblock %}
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    {% include 'components/footer.html' with about_description=settings.about_description %}
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_scripts %}
+    {% endblock %}
+  </body>
+</html>

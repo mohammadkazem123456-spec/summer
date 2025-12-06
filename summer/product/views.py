@@ -1,11 +1,23 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.http import JsonResponse
 from product.form import ContactForm
 from product.models import Category, Product, SiteSetting, Testimonial, Theme
 from django.views.decorators.cache import cache_page
 from django.views.decorators.csrf import csrf_exempt
 
+
 # Create your views here.
+def product_detail(request, pk):
+    product = get_object_or_404(Product, pk=pk)
+    gallery = product.gallery.all()
+    features = product.features.all()
+
+    context = {
+        "product": product,
+        "gallery": gallery,
+        "features": features,
+    }
+    return render(request, "product_detail.html", context)
 
 
 # @cache_page(60 * 15)  # 15 دقیقه
