@@ -20,7 +20,7 @@ services:
     container_name: summer_django
     command: gunicorn summer.wsgi:application --bind 0.0.0.0:8000
     volumes:
-      - ./src:/app            # سورس کد
+
       - ./media:/app/media    # media واقعی
       - ./staticfiles:/app/staticfiles                  # پروژه + media داخل همین مسیر است
     depends_on:
